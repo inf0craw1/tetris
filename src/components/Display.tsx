@@ -1,5 +1,4 @@
-import { useContext, useMemo } from "react";
-import { GameContext } from "../contexts/GameContext";
+import { useContext } from "react";
 import { GridContext } from "../contexts/GridContext";
 import "../styles/display.scss";
 
