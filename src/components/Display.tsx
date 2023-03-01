@@ -1,10 +1,17 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { GridContext } from "../contexts/GridContext";
 import "../styles/display.scss";
 
 function Display() {
   const gridData = useContext(GridContext);
-  console.log(gridData);
+  const [currentBlock, setCurrentBlock] = useState({
+    blockType: 1,
+    direction: 0,
+    location: {
+      x: 4,
+      y: 0,
+    },
+  });
 
   const renderGrid = () =>
     gridData.map((horizontalData, i) => (
